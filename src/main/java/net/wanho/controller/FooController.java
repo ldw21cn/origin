@@ -18,7 +18,7 @@ import java.util.List;
 public class FooController {
 
     /**
-     * FooController111111111
+     * FooController
      * @param foo
      * @param bindingResult
      * @return
