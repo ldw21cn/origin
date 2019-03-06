@@ -17,6 +17,12 @@ import java.util.List;
 @Controller
 public class FooController {
 
+    /**
+     * FooController
+     * @param foo
+     * @param bindingResult
+     * @return
+     */
     @RequestMapping("/foo")
     public ModelAndView foo(@Valid Foo foo , BindingResult bindingResult) {
         List<String> errorList = new ArrayList<>();
