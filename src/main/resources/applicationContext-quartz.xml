@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- 自己的任务-->
+    <bean id="xxx" class="net.wanho.task.HelloTask" />
+    <!-- quartz配置 -->
+    <bean id="importTourGroupsSchedulerBean"
+          class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+        <property name="targetObject" ref="xxx"></property>
+        <property name="targetMethod" value="execute"></property>
+        <property name="concurrent" value="false" />
+    </bean>
+    <!-- ======================= quartz Cron Trigger ========================= -->
+    <bean id="importTourGroupsSchedulerCronTrigger"
+          class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">
+        <property name="jobDetail" >
+            <ref bean="importTourGroupsSchedulerBean"/>
+        </property>
+        <property name="cronExpression" value="0-5 * * * * ?" />
+    </bean>
+    <!-- ======================= Scheduler Factory ========================= -->
+    <bean id="schedulerFactoryBean"
+          class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
+        <property name="triggers">
+            <list>
+                <ref bean="importTourGroupsSchedulerCronTrigger" />
+            </list>
+        </property>
+    </bean>
+</beans>

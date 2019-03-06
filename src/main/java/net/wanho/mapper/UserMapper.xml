@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="net.wanho.mapper.UserMapper">
+
+    <resultMap id="resultMap" type="net.wanho.entity.User">
+        <result property="name" column="t_name"></result>
+    </resultMap>
+
+    <insert id="insertUser" parameterType="net.wanho.entity.User">
+        insert into tb_user values(null,#{account},#{passwd},now(),now())
+    </insert>
+
+    <select id="getUserByAccount" resultType="net.wanho.entity.User">
+        select * from tb_user where account=#{account}
+    </select>
+
+    <update id="updateUser" parameterType="net.wanho.entity.User">
+        update tb_user set account=#{account},passwd=#{passwd},lastLoginDate=#{lastLoginDate} where id=#{id}
+    </update>
+
+
+</mapper>
