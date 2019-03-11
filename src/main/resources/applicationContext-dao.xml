@@ -34,5 +34,5 @@ http://www.springframework.org/schema/beans/spring-beans.xsd">
     </bean>
 
     <!--添加注释测试-->
-    <!--更新 second-->
+    <!--second-->
 </beans>
