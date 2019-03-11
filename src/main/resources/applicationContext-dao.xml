@@ -32,4 +32,6 @@ http://www.springframework.org/schema/beans/spring-beans.xsd">
           class="org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate">
         <constructor-arg ref="dataSource"></constructor-arg>
     </bean>
+
+    <!--添加注释测试-->
 </beans>
