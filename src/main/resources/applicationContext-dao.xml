@@ -35,4 +35,5 @@ http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <!--添加注释测试-->
     <!--second-->
+    <!--three-->
 </beans>
