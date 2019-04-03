@@ -1,0 +1,65 @@
+{
+  "random" : false,
+  "authPass" : null,
+  "useOnlinePac" : false,
+  "TTL" : 0,
+  "global" : false,
+  "reconnectTimes" : 3,
+  "index" : 0,
+  "proxyType" : 0,
+  "proxyHost" : null,
+  "authUser" : null,
+  "proxyAuthPass" : null,
+  "isDefault" : false,
+  "pacUrl" : null,
+  "configs" : [
+    {
+      "enable" : true,
+      "password" : "sundy008",
+      "method" : "aes-256-cfb",
+      "remarks" : "美国.加利福尼亚",
+      "server" : "104.225.155.20",
+      "kcptun" : {
+        "nocomp" : false,
+        "key" : "sundy008",
+        "crypt" : "aes",
+        "datashard" : 10,
+        "mtu" : 1350,
+        "mode" : "fast3",
+        "parityshard" : 3,
+        "arguments" : ""
+      },
+      "enabled_kcptun" : true,
+      "server_port" : 29900,
+      "remarks_base64" : "576O5Zu9LuWKoOWIqeemj+WwvOS6mg=="
+    },
+    {
+      "enable" : true,
+      "password" : "sundy008",
+      "method" : "aes-256-cfb",
+      "remarks" : "德国.慕尼黑",
+      "server" : "207.180.203.22",
+      "kcptun" : {
+        "nocomp" : false,
+        "key" : "sundy008",
+        "crypt" : "aes",
+        "datashard" : 10,
+        "mtu" : 1350,
+        "mode" : "fast3",
+        "parityshard" : 3,
+        "arguments" : ""
+      },
+      "enabled_kcptun" : true,
+      "server_port" : 29900,
+      "remarks_base64" : "5b635Zu9LuaFleWwvOm7kQ=="
+    }
+  ],
+  "proxyPort" : 0,
+  "randomAlgorithm" : 0,
+  "proxyEnable" : false,
+  "enabled" : true,
+  "autoban" : false,
+  "proxyAuthUser" : null,
+  "shareOverLan" : false,
+  "localPort" : 1080
+}
